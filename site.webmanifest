@@ -1,0 +1,20 @@
+{
+  "name": "שליחת הודעות whatsapp למספרים שלא באנשי הקשר שלך",
+  "short_name": "wa - Quick Message",
+  "icons": [
+    {
+      "src": "./icons/whatsapp_icon-icons.com_128x128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "./icons/whatsapp_icon-icons.com_512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#28c143",
+  "background_color": "#28c143",
+  "display": "standalone",
+  "start_url": "/index.html"
+}
