@@ -10,6 +10,8 @@
     <meta charset='utf-8'>
     <title>שליחת הודעות whatsapp למספרים שלא באנשי הקשר שלך</title>
     <meta property="og:title" content="שליחת הודעות whatsapp למספרים שלא באנשי הקשר שלך"/>
+    <meta name="docsearch:language" content="heb">
+    <link rel="canonical" href="https://d2kuyudyrd0xnk.cloudfront.net/">
     <meta property="og:url" content="https://d2kuyudyrd0xnk.cloudfront.net/"/>
     <meta property="og:image:url" content="https://d2kuyudyrd0xnk.cloudfront.net/icons/whatsapp-promo.png" />
     <meta property="og:site_name" content="quick-whatsapp-msg" />
@@ -17,7 +19,7 @@
     <meta property="fb:app_id" content="205335969603357" />
     <meta property="og:description"  content="שימושי. לא צריך למלא הטלפון במספרים זמניים של קבלנים בעלי מקצוע וכו... שולחים וגומרים" />
     <meta name="description" content="שימושי. לא צריך למלא הטלפון במספרים זמניים של קבלנים בעלי מקצוע וכו... שולחים וגומרים">
-    <meta name="keywords" content="whatsapp,וואטסאפ,אנשי קשר,שליחת הודעות">
+    <meta name="keywords" content="whatsapp וואטסאפ,אנשי קשר,שליחת הודעות,שליחת הודעה ללא איש קשר">
     <link rel="manifest" href="./site.webmanifest">
     <link id="favicon" rel="shortcut icon" href="./icons/favicon.png" type="image/png"/>
     <link rel="icon" type="image/x-icon" href="./icons/favicon.png">
@@ -47,11 +49,17 @@
        <div class="container mt-3">
            <div class="row">
                <h1>
-                   שליחת הודעות whatsapp למספרים שלא באנשי הקשר שלך
+                   שליחת הודעות whatsapp/וואטסאפ למספרים שלא באנשי הקשר שלך
                </h1>
+               <h2>
+                   .שליחת הודעה ללא איש קשר שמור במכשירך
+               </h2>
                <p class="lead">
                    שימושי. לא צריך למלא הטלפון במספרים זמניים של קבלנים בעלי מקצוע וכו... שולחים וגומרים
                </p>
+               <cite>
+                   מהיום אין צורך, לשמור את האיש קשר הזמני, באנשי הקשר שבמכשיר, פשוט מזינים פרטים, ולוחצים על השלח - מועברים ל-whatsApp/וואטסאפ, מקל, פשוט וקל לתפעול.
+               </cite>
            </div>
            <div class="mb-3 row" v-if="options.length">
                <label for="auto-complete" class="form-label">חיפוש קיימים</label>
@@ -65,36 +73,49 @@
 
            </div>
            <div class="mb-3 row">
-               <label for="phone" class="form-label">טלפון לשליחה:</label>
-               <input v-model="phone" type="tel" class="form-control" placeholder="הזן טלפון לשליחה" id="phone" />
+               <label for="phone" class="form-label">למי אנחנו רוצים לשלוח?</label>
+               <input v-model="phone" type="tel" class="form-control" placeholder="למי אנחנו רוצים לשלוח?" id="phone" />
            </div>
            <div class="mb-3 row">
-               <label for="fullName" class="form-label">שם מלא:</label>
-               <input v-model="fullName" id="fullName" placeholder="מי זה?"  class="form-control" />
+               <label for="fullName" class="form-label">מה הכינוי שלו? (כדי שנוכל לשמור לכם אותו, אם תצטרכו את השירות שוב).</label>
+               <input v-model="fullName" id="fullName" placeholder="מה הכינוי שלו?"  class="form-control" />
            </div>
            <div class="mb-3 row">
-               <label for="text-message" class="form-label">תוכן ההודעה:</label>
+               <label for="text-message" class="form-label">תוכן ההודעת הוואטסאפ:</label>
                <textarea id="text-message" class="form-control"
                       v-model="textMessage"
+                         placeholder="הודעה"
                ></textarea>
            </div>
-           <div>
-               <button v-on:click="onSendQuickMessage()" class="btn btn-success mb-3 w-100">
+           <div class="mb-3 row">
+               <button v-on:click="onSendQuickMessage()" class="btn btn-success mb-3 w-100" title="עבור לוואטסאפ">
                    <i class="fa fa-whatsapp" aria-hidden="true"></i>
                    <span>שלח</span>
                </button>
            </div>
+           <footer>
+               <div>
+                   <button class="add-button btn btn-success w-100 mb-3">
+                       <i class="fa fa-home" aria-hidden="true"></i>
+                       <span>הוסף למסך הבית</span>
+                   </button>
+               </div>
+               <div class="col-6 col-lg-2 offset-lg-1 mb-3">
+                   <h5>קישורים</h5>
+                   <ul class="list-unstyled">
+                       <li class="mb-2"><a href="https://web.whatsapp.com/">Whatsapp - Web</a></li>
+                   </ul>
+               </div>
+           </footer>
        </div>
 
-       <div>
-<!--           <img src="icons/whatsapp_icon-icons.com_128x128.png" alt="Add to home screen" title="Add to home screen">-->
-           <button class="add-button btn btn-success w-100 mb-3">
-               <i class="fa fa-home" aria-hidden="true"></i>
-               <span>הוסף למסך הבית</span>
-           </button>
-       </div>
+
+
+
+
    </div>
 </div>
+
 
 
 <link href="./css/bootstrap.min.css" rel="stylesheet" >

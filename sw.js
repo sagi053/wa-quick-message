@@ -1,4 +1,4 @@
-const cacheName = 'v1.0.1::static';
+const cacheName = 'v1.0.1';
 
 self.addEventListener('install', e => {
     // once the SW is installed, go ahead and fetch the resources
